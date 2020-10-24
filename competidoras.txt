@@ -155,4 +155,4 @@ IdadeNaTemp	VitoriasSemanais	EstadoDeOrigem	VezesNaEliminacao
 28	0	"Nova York"	2
 28	0	California	1
 28	0	California	1
-
+27	1	"Nova York" 0
