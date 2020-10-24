@@ -1,20 +1,39 @@
 library(ggplot2)
+library(e1071)
 
 dados <- read.table("~/UFSC/Estatistica/trabalho-estatistica/competidoras.txt", 
                     stringsAsFactors = T,
                     header=T)
-
+# Medidas de resumo idade
 quantile(dados$IdadeNaTemp, c(.25, .75)) # cálculo dos percentis de ordem 25 e 75
 summary(dados$IdadeNaTemp) # resumo de medidas
-summary(dados$VitoriasSemanais)
-summary(dados$VezesNaEliminacao)
-summary(dados$EstadoDeOrigem)
+mean(dados$IdadeNaTemp) # média
+median(dados$IdadeNaTemp) # mediana
+var(dados$IdadeNaTemp) # variância
+sd(dados$IdadeNaTemp) # desvio padrão
+sd(dados$IdadeNaTemp)/mean(dados$IdadeNaTemp)*100 # coeficiente de variação
+skewness(dados$IdadeNaTemp) # assimetria
+kurtosis(dados$IdadeNaTemp) # curtose
 
+# Medidas de resumo vitórias
+summary(dados$VitoriasSemanais)
 mean(dados$VitoriasSemanais) # média
 median(dados$VitoriasSemanais) # mediana
 var(dados$VitoriasSemanais) # variância
 sd(dados$VitoriasSemanais) # desvio padrão
 sd(dados$VitoriasSemanais)/mean(dados$VitoriasSemanais)*100 # coeficiente de variação
-library(e1071) # carregar biblioteca
 skewness(dados$VitoriasSemanais) # assimetria
 kurtosis(dados$VitoriasSemanais) # curtose
+
+# Medidas de resumo eliminações
+summary(dados$VezesNaEliminacao)
+mean(dados$VezesNaEliminacao) # média
+median(dados$VezesNaEliminacao) # mediana
+var(dados$VezesNaEliminacao) # variância
+sd(dados$VezesNaEliminacao) # desvio padrão
+sd(dados$VezesNaEliminacao)/mean(dados$VezesNaEliminacao)*100 # coeficiente de variação
+skewness(dados$VezesNaEliminacao) # assimetria
+kurtosis(dados$VezesNaEliminacao) # curtose
+
+summary(dados$EstadoDeOrigem)
+
