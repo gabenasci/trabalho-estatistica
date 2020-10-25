@@ -42,6 +42,33 @@ ggplot() +
        y = 'Frequência')
 
 
+# Gráficos de caixa
+
+ggplot(data = dados, # data frame utilizado
+       aes(x = NULL, # utilizar x=NULL para construir um único gráfico de caixa
+           y = IdadeNaTemp)) + # variável utilizada para construção do gráfico de caixa
+  geom_boxplot(fill = 'lightgrey') + # função para construção do gráfico de caixa
+  labs(x = NULL, # nomeação dos eixos
+       y = 'Idade') +
+  theme_minimal()
+
+ggplot(data = dados, # data frame utilizado
+       aes(x = NULL, # utilizar x=NULL para construir um único gráfico de caixa
+           y = VitoriasSemanais)) + # variável utilizada para construção do gráfico de caixa
+  geom_boxplot(fill = 'lightgrey') + # função para construção do gráfico de caixa
+  labs(x = NULL, # nomeação dos eixos
+       y = 'Vitórias semanais') +
+  theme_minimal()
+
+ggplot(data = dados, # data frame utilizado
+       aes(x = NULL, # utilizar x=NULL para construir um único gráfico de caixa
+           y = VezesNaEliminacao)) + # variável utilizada para construção do gráfico de caixa
+  geom_boxplot(fill = 'lightgrey') + # função para construção do gráfico de caixa
+  labs(x = NULL, # nomeação dos eixos
+       y = 'Vezes na eliminação') +
+  theme_minimal()
+
+
 
 
                      
