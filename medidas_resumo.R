@@ -40,4 +40,4 @@ skewness(dados$VezesNaEliminacao) # assimetria
 kurtosis(dados$VezesNaEliminacao) # curtose
 
 summary(dados$EstadoDeOrigem)
-
+moda(dados$EstadoDeOrigem)
